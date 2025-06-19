@@ -1,4 +1,3 @@
-const { type } = require('express/lib/response');
 const mongoose = require('mongoose');  //this is how you import in node js
 const Schema = mongoose.Schema;
 
