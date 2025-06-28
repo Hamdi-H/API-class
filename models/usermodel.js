@@ -24,7 +24,15 @@ try{
 } catch(error){
     next(error)
 }
-})
+});
+
+userSchema.methods.isValidPassword = async function(password) {
+    try{
+  return await bcrypt.compare(password, this.password);
+    }catch(err){
+        throw err;
+    }
+};
 
 
 const user = mongoose.model('user',userSchema);

@@ -4,4 +4,5 @@ const routes = express.Router();
 
 
 routes.post('/register',usercontroller.registeruser );
+routes.post('/login',usercontroller.login);
 module.exports = routes;
